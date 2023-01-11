@@ -1,0 +1,15 @@
+package loops;
+import java.util.Scanner;
+public class NthFibonacciNumber {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int n1 = 1, n2 = 1;
+		if(n1 == n || n2 == n) {
+			System.out.println(n);
+		}
+		
+	}
+
+}

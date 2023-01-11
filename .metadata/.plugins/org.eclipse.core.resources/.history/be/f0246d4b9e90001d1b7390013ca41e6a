@@ -1,0 +1,18 @@
+package recursion;
+
+public class PrintFirstNNaturalNumbers {
+	
+	public static int  printFNNN(int n) {
+		if(n == 1)
+			System.out.println(n);
+		int smallOutput = printFNNN(n-1);
+		System.out.println(smallOutput);
+		return 0;
+		
+	}
+	
+	public static void main(String args[]) {
+		
+	}
+
+}

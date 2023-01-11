@@ -1,0 +1,40 @@
+package arrays;
+import java.util.Scanner;
+public class BinarySearch {
+	public static int[] takeInput() {
+		Scanner s = new Scanner(System.in);
+		int size = s.nextInt();
+		int arr[] = new int[size];
+		for(int i=0; i<size; i++)
+			arr[i] = s.nextInt();
+		
+		return arr;
+	}
+	
+	public static int search(int[] arr, int x) {
+		int start = 0;
+		int end = arr.length-1;
+		while(start <= end){
+			int mid = (start + end) /2;
+			if(x == arr[mid])
+				return mid;
+			else if(x < arr[mid])
+				end = mid -1;
+			else
+				start = mid+1;
+		}
+		return -1;
+	}
+	
+	public static void main(String args[]) {
+		Scanner s =new Scanner(System.in);
+		System.out.println("arrar 1");
+		
+		int arr[] = takeInput();
+		System.out.println("Enter element x : ");
+		int x = s.nextInt();
+		System.out.println(search(arr,x));
+		
+		
+	}
+}	
